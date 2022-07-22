@@ -44,10 +44,13 @@ const replayButtonEl = document.getElementById("replay");
 //  The Knight's Word panel
 const knightsWordEl = document.getElementById("knights-word");
 //  The dragon's flame(where the knight goes)
-const flameEl = document.getElementById("flame-box");
+const knightEl = document.getElementById("knight");
 
 //  Event listeners
+//  For picking letters
 alphaButtonEl.addEventListener("click", knightsLetter);
+//  For replay button
+replayButtonEl.addEventListener("click", initialize);
 
 initialize();
 //  Functions
@@ -60,12 +63,14 @@ function initialize() {
     //  Reset failCount to 0
     failCount = 0;
     //  Reset alphaButtons to active
-    // for (button of alphaButtonEl) {
-    //     if (button.className !== "active") {
-    //         button.className = "active";
-    //     }
-    // }
+    let buttons = alphaButtonEl.getElementsByTagName("button");
+    for (button of buttons) {
+        if (button.disabled === true) {
+            button.disabled = false;
+        }
+    }
     //  Deactivate and darken replay button
+    replayButtonEl.disabled = true;
     //  Reset victory status
     victory = null;
     //  Reset gameEnd to false
@@ -79,6 +84,8 @@ function render() {
     knightsWordEl.innerHTML = knightsWord;
     //  Changes to Knight in the Fire
     if (failCount === 0) {
+        knightEl.style.display = "none";
+    } else if (failCount === 1) {
         
     }
 }
@@ -87,7 +94,7 @@ function knightsLetter(e) {
     //  Compares the knight's letter with the Wyrm's word and sees if it's in there, then updates the value of knightsWord if so. If not, failCount increases by 1.
     if (e.target.tagName !== "BUTTON") {
         return;
-    }
+    }   //  <-- Make it so the area around the buttons cannot be clicked.
     let letter = e.target.innerText;
     let stringArray = knightsWord.split("");
     //console.log(stringArray);
@@ -104,6 +111,22 @@ function knightsLetter(e) {
         failCount++;
     }
     knightsWord = stringArray.join("");
+    //  Now I need to make it so the button deactivates.
+    e.target.disabled = true;
+    //  Also if the failCount hits 6, that's game-over.
+    if (failCount === 6) {
+        victory = false;
+        gameEnd = true;
+    }
+    //  And if there are no underscores remaining, the Knight wins!
+    if (knightsWord === wyrmsWord) {
+        victory = true;
+        gameEnd = true;
+    }
+    //  If the game is over, activate the replay button
+    if (victory === true) {
+        replayButtonEl.disabled = false;
+    }
     render();
 }
 
@@ -113,7 +136,7 @@ function knightsHiddenWord() {
     console.log(wyrmsWord);
     for (let i = 0; i < wyrmsWord.length; i++) {
         hiddenWord += "_";
-        console.log(hiddenWord);
+        //console.log(hiddenWord);
     }
     return hiddenWord;
 }
