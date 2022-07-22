@@ -23,21 +23,54 @@ const wyrmWords = [
 ];
 
 //  Need to define state variables...
+//  The word the Wyrm picks
+let wyrmsWord = "";
 //  The word that will be filled in
 const knightsWord = "";
 //  The letter the knight picked
 let knightsChoice = "";
 //  How many times the knight has failed so far
-const failCount = null;
+let failCount;
 //  win/lose
 let victory;
+//  Has the game ended?
+let gameEnd;
 
 //  Cached element selectors
 //  The letter buttons
 const alphaButtonEl = document.querySelectorAll("#alphabuttons > button");
 //  The replay button
 const replayButtonEl = document.getElementById("replay");
+//  The Knight's Word panel
+const knightsWordEl = document.getElementById("knights-word");
+//  The dragon's flame(where the knight goes)
+const flameEl = document.getElementById("flame-box");
 
 //  Event listeners
 
+initialize();
 //  Functions
+function initialize() {
+    //  Initializes the board
+    //  The Words Wyrm chooses a new word
+    wyrmsWord = wyrmChooses();
+    //  Reset failCount to 0
+    failCount = 0;
+    //  Reset alphaButtons to active
+    //  Deactivate and darken replay button
+    //  Reset victory status
+    victory = null;
+    //  Reset gameEnd to false
+    gameEnd = false;
+}
+
+function render() {
+    //  Changes the page to match the state changes
+}
+
+function 
+
+function wyrmChooses() {
+    //  The Words Wyrm chooses his secret word
+    return wyrmWords[Math.floor(Math.random() * wyrmWords.length)].word;
+}
