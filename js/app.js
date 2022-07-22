@@ -1,7 +1,7 @@
 console.log("Finding dragons...");
 
 //  This needs to be an array of objects that contains the secret word and its definition(to be given when the player wins)
-const wyrmWords = {
+const wyrmWords = [
     {word: "BUMFUZZLE", definition: "to confuse, to perplex, to fluster"},
     {word: "CATTYWAMPUS", definition: "when something is askew or awry" },
     {word: "TARADIDDLE", definition: "lies or pretentious nonsense"},
@@ -20,8 +20,24 @@ const wyrmWords = {
     {word: "ERINACEOUS", definition: "like or relating to the hedgehog"},
     {word: "BIBBLE", definition: "to drink liquor, especially continuously in small amounts"},
     {word: "NINCOMPOOP", definition: "a foolish or silly person"}
-};
+];
 
-//  Need to define starting variables...
+//  Need to define state variables...
+//  The word that will be filled in
 const knightsWord = "";
+//  The letter the knight picked
 let knightsChoice = "";
+//  How many times the knight has failed so far
+const failCount = null;
+//  win/lose
+let victory;
+
+//  Cached element selectors
+//  The letter buttons
+const alphaButtonEl = document.querySelectorAll("#alphabuttons > button");
+//  The replay button
+const replayButtonEl = document.getElementById("replay");
+
+//  Event listeners
+
+//  Functions
