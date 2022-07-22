@@ -38,7 +38,7 @@ let gameEnd;
 
 //  Cached element selectors
 //  The letter buttons
-const alphaButtonEl = document.querySelectorAll("#alphabuttons > button");
+const alphaButtonEl = document.querySelector("#alphabuttons");
 //  The replay button
 const replayButtonEl = document.getElementById("replay");
 //  The Knight's Word panel
@@ -47,8 +47,7 @@ const knightsWordEl = document.getElementById("knights-word");
 const flameEl = document.getElementById("flame-box");
 
 //  Event listeners
-document.querySelector("#alphabuttons > button")
-    .addEventListener("click", knightsLetter);
+alphaButtonEl.addEventListener("click", knightsLetter);
 
 initialize();
 //  Functions
@@ -61,25 +60,41 @@ function initialize() {
     //  Reset failCount to 0
     failCount = 0;
     //  Reset alphaButtons to active
+    // for (button of alphaButtonEl) {
+    //     if (button.className !== "active") {
+    //         button.className = "active";
+    //     }
+    // }
     //  Deactivate and darken replay button
     //  Reset victory status
     victory = null;
     //  Reset gameEnd to false
     gameEnd = false;
+    render();
 }
 
 function render() {
     //  Changes the page to match the state changes
-
+    //  Changes to knightsWord
+    knightsWordEl.innerHTML = knightsWord;
+    //  Changes to Knight in the Fire
+    if (failCount === 0) {
+        
+    }
 }
 
-function knightsLetter() {
+function knightsLetter(e) {
     //  Compares the knight's letter with the Wyrm's word and sees if it's in there, then updates the value of knightsWord if so. If not, failCount increases by 1.
+    if (e.target.tagName !== "BUTTON") {
+        return;
+    }
     let letter = e.target.innerText;
+    let stringArray = knightsWord.split();
+    console.log(letter, stringArray);
     if (wyrmsWord.includes(letter)) {
         for (let i = 0; i < wyrmsWord.length; i++) {
             if (wyrmsWord[i] === letter) {
-                knightsHiddenWord[i] = letter;
+                knightsWord[i] = letter;
             }
         }
     } else {
@@ -93,7 +108,7 @@ function knightsHiddenWord() {
     let hiddenWord = "";
     console.log(wyrmsWord);
     for (let i = 0; i < wyrmsWord.length; i++) {
-        hiddenWord + "_";
+        hiddenWord += "_";
         console.log(hiddenWord);
     }
     return hiddenWord;
