@@ -83,10 +83,25 @@ function render() {
     //  Changes to knightsWord
     knightsWordEl.innerHTML = knightsWord;
     //  Changes to Knight in the Fire
+    //  Grabbing the individual bits of the knight element
+    let knightsBody = knightEl.getElementsByTagName("p");
+    console.log(knightsBody);
     if (failCount === 0) {
-        knightEl.style.display = "none";
+        for (part of knightsBody) {
+            part.style.display = "none";
+        }
     } else if (failCount === 1) {
-        
+        knightsBody[0].style.display = "block";
+    } else if (failCount === 2) {
+        knightsBody[1].style.display = "block";
+    } else if (failCount === 3) {
+        knightsBody[2].style.display = "block"
+    } else if (failCount === 4) {
+        knightsBody[3].style.display = "block";
+    } else if (failCount === 5) {
+        knightsBody[4].style.display = "block";
+    } else if (failCount === 6) {
+        knightsBody[5].style.display = "block";
     }
 }
 
@@ -123,9 +138,15 @@ function knightsLetter(e) {
         victory = true;
         gameEnd = true;
     }
-    //  If the game is over, activate the replay button
-    if (victory === true) {
+    //  If the game is over, activate the replay button and also deactivate all the remaining letter buttons
+    if (gameEnd === true) {
         replayButtonEl.disabled = false;
+        let buttons = alphaButtonEl.getElementsByTagName("button");
+        for (button of buttons) {
+            if (button.disabled === false) {
+                button.disabled = true;
+            }
+        }
     }
     render();
 }
