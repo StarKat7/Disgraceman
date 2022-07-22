@@ -26,7 +26,7 @@ const wyrmWords = [
 //  The word the Wyrm picks
 let wyrmsWord = "";
 //  The word that will be filled in
-const knightsWord = "";
+let knightsWord = "";
 //  The letter the knight picked
 let knightsChoice = "";
 //  How many times the knight has failed so far
@@ -47,6 +47,8 @@ const knightsWordEl = document.getElementById("knights-word");
 const flameEl = document.getElementById("flame-box");
 
 //  Event listeners
+document.querySelector("#alphabuttons > button")
+    .addEventListener("click", knightsLetter);
 
 initialize();
 //  Functions
@@ -54,6 +56,8 @@ function initialize() {
     //  Initializes the board
     //  The Words Wyrm chooses a new word
     wyrmsWord = wyrmChooses();
+    //  Hide the word for the knight
+    knightsWord = knightsHiddenWord();
     //  Reset failCount to 0
     failCount = 0;
     //  Reset alphaButtons to active
@@ -66,9 +70,34 @@ function initialize() {
 
 function render() {
     //  Changes the page to match the state changes
+
 }
 
-function 
+function knightsLetter() {
+    //  Compares the knight's letter with the Wyrm's word and sees if it's in there, then updates the value of knightsWord if so. If not, failCount increases by 1.
+    let letter = e.target.innerText;
+    if (wyrmsWord.includes(letter)) {
+        for (let i = 0; i < wyrmsWord.length; i++) {
+            if (wyrmsWord[i] === letter) {
+                knightsHiddenWord[i] = letter;
+            }
+        }
+    } else {
+        failCount++;
+    }
+    render();
+}
+
+function knightsHiddenWord() {
+    //  Underscores are used to replace the characters in the wyrmsWord
+    let hiddenWord = "";
+    console.log(wyrmsWord);
+    for (let i = 0; i < wyrmsWord.length; i++) {
+        hiddenWord + "_";
+        console.log(hiddenWord);
+    }
+    return hiddenWord;
+}
 
 function wyrmChooses() {
     //  The Words Wyrm chooses his secret word
