@@ -4,10 +4,35 @@
 
   body {
     display: grid;
+    background-color: green;
+  }
+
+  #flame-box {
+    height: 300px;
+    background-color: red;
+  }
+
+  #knights-word {
+    height: 50px;
+    width: 300px;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: purple;
+    text-align: center;
+  }
+
+  #knights-word > p {
+    letter-spacing: 5px;
+  }
+
+  #alpha-buttons {
+    height: 150px;
+    width: 100px;
+    background-color: blue;
   }
 
   #replay {
-    position: absolute;
+    display: flex;
     bottom: 10px;
-    margin: auto;
+    margin: 0 auto;
   }

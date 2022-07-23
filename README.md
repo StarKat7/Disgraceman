@@ -12,3 +12,5 @@
 ☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
 
 ☐ Next Steps: Planned future enhancements (icebox items).
+
+The inner workings took around 4 hours
