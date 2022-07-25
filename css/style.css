@@ -15,8 +15,17 @@
 
   #flame-box {
     grid-area: "flamebox";
+    display: grid;
     height: 300px;
-    background-color: red;
+    background-color: orange;
+  }
+
+  #knight {
+    position: relative;
+  }
+
+  #knight > img {
+    width: 25%;
   }
 
   #word-box {

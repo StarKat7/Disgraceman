@@ -86,7 +86,7 @@ function render() {
     knightsWordEl.innerText = knightsSpacedWord;
     //  Changes to Knight in the Fire
     //  Grabbing the individual bits of the knight element
-    let knightsBody = knightEl.getElementsByTagName("p");
+    let knightsBody = knightEl.getElementsByTagName("img");
     if (failCount === 0) {
         for (part of knightsBody) {
             part.style.display = "none";
