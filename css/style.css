@@ -5,34 +5,55 @@
   body {
     display: grid;
     background-color: green;
+    grid-template-areas:
+        "flamebox"
+        "knightword"
+        "letterbuttons"
+        "replay";
+    margin: 0;
   }
 
   #flame-box {
     height: 300px;
     background-color: red;
+    grid-area: "flamebox";
   }
 
   #knights-word {
     height: 50px;
-    width: 300px;
+    /* width: 300px; */
     justify-content: center;
-    margin: 10px auto;
+    margin: 5px 10px;
     background-color: purple;
     text-align: center;
+    padding: 5px auto 5px auto;
   }
 
   #knights-word > p {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 
-  #alpha-buttons {
-    height: 150px;
-    width: 100px;
+  #alphabuttons {
+    display: flex;
+    flex-wrap: wrap;
+    height: 165px;
+    /* width: 300px; */
+    position: center;
     background-color: blue;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 5px;
+  }
+
+  .letter {
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    margin: 2px 4px;
   }
 
   #replay {
     display: flex;
-    bottom: 10px;
     margin: 0 auto;
+    font-size: 15px;
   }
