@@ -23,14 +23,15 @@
     height: 50px;
     /* width: 300px; */
     justify-content: center;
-    margin: 5px 10px;
     background-color: purple;
     text-align: center;
-    padding: 5px auto 5px auto;
+    padding: 10px auto 0px auto;
   }
 
-  #knights-word > p {
-    letter-spacing: 3px;
+  #knights-word {
+    font-size: 30px;
+    margin: 5px 10px;
+    bottom: 0;
   }
 
   #alphabuttons {

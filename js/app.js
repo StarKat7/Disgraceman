@@ -158,7 +158,7 @@ function knightsHiddenWord() {
     //  Underscores are used to replace the characters in the wyrmsWord
     let hiddenWord = "";
     let wordArray = [];
-    //console.log(wyrmsWord);
+    console.log(wyrmsWord);
     for (let i = 0; i < wyrmsWord.length; i++) {
         hiddenWord += "_";
         wordArray.push("_");
