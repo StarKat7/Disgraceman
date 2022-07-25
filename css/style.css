@@ -14,12 +14,13 @@
   }
 
   #flame-box {
+    grid-area: "flamebox";
     height: 300px;
     background-color: red;
-    grid-area: "flamebox";
   }
 
   #word-box {
+    grid-area: "knightword";
     height: 50px;
     background-color: purple;
     text-align: center;
@@ -33,6 +34,7 @@
   }
 
   #alphabuttons {
+    grid-area: "letterbuttons";
     display: flex;
     flex-wrap: wrap;
     height: 165px;
@@ -51,6 +53,7 @@
   }
 
   #replay {
+    grid-area: "replay";
     display: flex;
     margin: 0 auto;
     font-size: 15px;

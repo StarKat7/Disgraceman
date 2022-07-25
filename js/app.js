@@ -87,7 +87,6 @@ function render() {
     //  Changes to Knight in the Fire
     //  Grabbing the individual bits of the knight element
     let knightsBody = knightEl.getElementsByTagName("p");
-    console.log(knightsBody);
     if (failCount === 0) {
         for (part of knightsBody) {
             part.style.display = "none";
