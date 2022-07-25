@@ -19,10 +19,8 @@
     grid-area: "flamebox";
   }
 
-  #knights-word {
+  #word-box {
     height: 50px;
-    /* width: 300px; */
-    justify-content: center;
     background-color: purple;
     text-align: center;
     padding: 10px auto 0px auto;
@@ -30,7 +28,7 @@
 
   #knights-word {
     font-size: 30px;
-    margin: 5px 10px;
+    margin: 5px 10px 0px auto;
     bottom: 0;
   }
 
@@ -38,7 +36,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 165px;
-    /* width: 300px; */
     position: center;
     background-color: blue;
     justify-content: center;
