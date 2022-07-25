@@ -27,6 +27,8 @@ const wyrmWords = [
 let wyrmsWord = "";
 //  The word that will be filled in
 let knightsWord = "";
+//  For displaying the word on the page
+let knightsSpacedWord = "";
 //  The letter the knight picked
 let knightsChoice = "";
 //  How many times the knight has failed so far
@@ -81,7 +83,7 @@ function initialize() {
 function render() {
     //  Changes the page to match the state changes
     //  Changes to knightsWord
-    knightsWordEl.innerHTML = knightsWord;
+    knightsWordEl.innerText = knightsSpacedWord;
     //  Changes to Knight in the Fire
     //  Grabbing the individual bits of the knight element
     let knightsBody = knightEl.getElementsByTagName("p");
@@ -126,6 +128,7 @@ function knightsLetter(e) {
         failCount++;
     }
     knightsWord = stringArray.join("");
+    knightsSpacedWord = stringArray.join(" ");
     //  Now I need to make it so the button deactivates.
     e.target.disabled = true;
     //  Also if the failCount hits 6, that's game-over.
@@ -154,11 +157,14 @@ function knightsLetter(e) {
 function knightsHiddenWord() {
     //  Underscores are used to replace the characters in the wyrmsWord
     let hiddenWord = "";
-    console.log(wyrmsWord);
+    let wordArray = [];
+    //console.log(wyrmsWord);
     for (let i = 0; i < wyrmsWord.length; i++) {
         hiddenWord += "_";
+        wordArray.push("_");
         //console.log(hiddenWord);
     }
+    knightsSpacedWord = wordArray.join(" ");
     return hiddenWord;
 }
 

@@ -5,12 +5,12 @@
   body {
     display: grid;
     background-color: green;
+    margin: 0;
     grid-template-areas:
         "flamebox"
         "knightword"
         "letterbuttons"
         "replay";
-    margin: 0;
   }
 
   #flame-box {
