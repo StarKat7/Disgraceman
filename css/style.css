@@ -88,14 +88,16 @@
     /* background-color: purple; */
     text-align: center;
     padding: 10px auto 0px;
-    margin: 5px auto;
+    margin: 5px 2px;
   }
 
   #knights-word {
     font-size: 30px;
+    font-family: Georgia;
+    color: white;
     margin: 5px auto 0px;
     bottom: 0;
-    text-shadow: 1px 1px 5px white;
+    text-shadow: 1px 1px 5px black;
   }
 
   #alphabuttons {
@@ -104,7 +106,6 @@
     flex-wrap: wrap;
     height: 165px;
     position: center;
-    /* background-color: blue; */
     justify-content: center;
     margin: 5px auto;
     padding: 10px 5px;
@@ -119,6 +120,7 @@
     margin: 2px 4px;
     background-color: gray;
     border-radius: 25%;
+    font-family: Georgia;
   }
 
   #replay {
@@ -128,7 +130,35 @@
     margin: 15px auto;
     bottom: 5px;
     font-size: 15px;
-    color: white;
+    color: light gray;
     background-color: gray;
     border-radius: 5px;
+    font-family: Georgia;
+  }
+
+  @media only screen and (min-width: 768px) {
+    body {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    #head {
+      top: 20%;
+    }
+
+    #torso {
+      top: 38%;
+    }
+
+    #right-arm {
+      top: 19%;
+    }
+
+    #left-arm {
+      top: 22%;
+    }
+
+    #replay {
+      left: 40%;
+    }
   }
