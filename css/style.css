@@ -4,11 +4,13 @@
 
   body {
     display: grid;
+    position: relative;
     margin: 0;
     background-image: url("https://i.imgur.com/Vt86LII.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 615px;
+    font-family: Georgia;
     grid-template-areas:
         "flamebox"
         "knightword"
@@ -99,8 +101,9 @@
     position: center;
     /* background-color: blue; */
     justify-content: center;
-    margin: auto;
+    margin: 0px auto;
     padding: 10px 5px;
+    bottom: 25%;
   }
 
   .letter {
@@ -108,11 +111,15 @@
     width: 35px;
     height: 35px;
     margin: 2px 4px;
+    background-color: gray;
+    border-radius: 25%;
   }
 
   #replay {
     grid-area: "replay";
-    display: flex;
-    margin: 0 auto;
+    margin: 0px auto 15px;
+    bottom: 15px;
     font-size: 15px;
+    background-color: gray;
+    border-radius: 5px;
   }
