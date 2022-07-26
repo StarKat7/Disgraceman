@@ -2,14 +2,16 @@
     box-sizing: border-box;
   }
 
+  html {
+    background: url("https://i.imgur.com/Vt86LII.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
   body {
     display: grid;
     position: relative;
     margin: 0;
-    background-image: url("https://i.imgur.com/Vt86LII.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 615px;
     font-family: Georgia;
     grid-template-areas:
         "flamebox"
@@ -21,7 +23,11 @@
   #flame-box {
     grid-area: "flamebox";
     display: grid;
-    height: 300px;
+    background-image: url("https://i.imgur.com/jcub6kI.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 350px;
     /* background-color: orange; */
   }
 
@@ -31,49 +37,48 @@
   }
 
   #knight > img {
-    width: 25%;
-    position: absolute;
+    width: 30%;
   }
 
   #head {
     position: absolute;
-    left: 40%;
-    top: 15%;
+    left: 41%;
+    top: 27%;
     z-index: 5;
   }
 
   #torso {
     position: absolute;
     left: 35%;
-    top: 30%;
+    top: 42%;
     z-index: 4;
   }
 
   #right-arm {
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 29%;
+    top: 25%;
     z-index: 3;
   }
   
   #left-arm {
     position: absolute;
-    left: 43%;
-    top: 18%;
+    left: 45%;
+    top: 29%;
     z-index: 6;
   }
 
   #right-leg {
     position: absolute;
-    left: 27%;
-    top: 49%;
+    left: 26%;
+    top: 61%;
     z-index: 2;
   }
 
   #left-leg {
     position: absolute;
-    left: 40%;
-    top: 49%;
+    left: 41%;
+    top: 61%;
     z-index: 1;
   }
 
@@ -101,13 +106,14 @@
     position: center;
     /* background-color: blue; */
     justify-content: center;
-    margin: 0px auto;
+    margin: 5px auto;
     padding: 10px 5px;
     bottom: 25%;
   }
 
   .letter {
     font-size: 15px;
+    color: white;
     width: 35px;
     height: 35px;
     margin: 2px 4px;
@@ -117,9 +123,12 @@
 
   #replay {
     grid-area: "replay";
-    margin: 0px auto 15px;
-    bottom: 15px;
+    position: absolute;
+    left: 37%;
+    margin: 15px auto;
+    bottom: 5px;
     font-size: 15px;
+    color: white;
     background-color: gray;
     border-radius: 5px;
   }

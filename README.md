@@ -16,4 +16,4 @@
 The inner workings took around 4 hours, working on CSS now
 
 ## Resources
-**Background Image** - Edited from "Sunset at Keyhole Arch" by Cedric Letsch, downloaded from Unsplash.
+**Background Image** - Edited from "Sunset at Keyhole Arch" by Cedric Letsch on Unsplash.
