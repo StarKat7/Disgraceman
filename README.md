@@ -13,4 +13,4 @@
 
 ☐ Next Steps: Planned future enhancements (icebox items).
 
-The inner workings took around 4 hours
+The inner workings took around 4 hours, working on CSS now
