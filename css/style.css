@@ -12,6 +12,7 @@
     display: grid;
     position: relative;
     margin: 0;
+    width: 400px;
     font-family: Georgia;
     grid-template-areas:
         "flamebox"
@@ -136,26 +137,26 @@
     font-family: Georgia;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 500px) {
     body {
       max-width: 500px;
       margin: auto;
     }
 
     #head {
-      top: 20%;
+      top: 28%;
     }
 
     #torso {
-      top: 38%;
+      top: 43%;
     }
 
     #right-arm {
-      top: 19%;
+      top: 27%;
     }
 
     #left-arm {
-      top: 22%;
+      top: 30%;
     }
 
     #replay {
