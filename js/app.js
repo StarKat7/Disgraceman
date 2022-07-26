@@ -88,9 +88,9 @@ function render() {
     //  Grabbing the individual bits of the knight element
     let knightsBody = knightEl.getElementsByTagName("img");
     if (failCount === 0) {
-        // for (part of knightsBody) {
-        //     part.style.display = "none";
-        // }
+        for (part of knightsBody) {
+            part.style.display = "none";
+        }
     } else if (failCount === 1) {
         knightsBody[0].style.display = "block";
     } else if (failCount === 2) {
