@@ -137,10 +137,16 @@
     font-family: Georgia;
   }
 
+  #pre-game-message {
+    position: absolute;
+    top: 25%;
+    z-index: 10;
+  }
+
   @media only screen and (min-width: 500px) {
     body {
       max-width: 500px;
-      margin: auto;
+      margin: 15px auto 0px;
     }
 
     #head {

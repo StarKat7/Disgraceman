@@ -69,6 +69,7 @@ function initialize() {
     for (button of buttons) {
         if (button.disabled === true) {
             button.disabled = false;
+            // button.style.display = "block";
         }
     }
     //  Deactivate and darken replay button
@@ -130,6 +131,7 @@ function knightsLetter(e) {
     knightsSpacedWord = stringArray.join(" ");
     //  Now I need to make it so the button deactivates.
     e.target.disabled = true;
+    // e.target.style.display = "none";
     //  Also if the failCount hits 6, that's game-over.
     if (failCount === 6) {
         victory = false;
@@ -157,11 +159,10 @@ function knightsHiddenWord() {
     //  Underscores are used to replace the characters in the wyrmsWord
     let hiddenWord = "";
     let wordArray = [];
-    console.log(wyrmsWord);
+    console.log(wyrmsWord); // <-- For the wizards
     for (let i = 0; i < wyrmsWord.length; i++) {
         hiddenWord += "_";
         wordArray.push("_");
-        //console.log(hiddenWord);
     }
     knightsSpacedWord = wordArray.join(" ");
     return hiddenWord;
