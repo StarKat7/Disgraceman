@@ -126,6 +126,11 @@
     font-family: Georgia;
   }
 
+  #replay, #pre-game-message > p, #start {
+    font-size: 15px;
+    font-family: Georgia;
+  }
+
   #replay {
     grid-area: "replay";
     position: absolute;
@@ -141,6 +146,7 @@
 
   #pre-game-message {
     position: absolute;
+    background: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     width: 300px;
     height: 200px;
     margin: 0px auto;
@@ -155,13 +161,12 @@
   }
 
   #pre-game-message > p {
-    margin: 15px;
+    margin: 20px;
   }
 
-  #begin {
-    position: absolute;
-    margin: 10px auto;
-    bottom: 10px;
+  #start {
+    background-color: gray;
+    border-radius: 5px;
   }
 
   @media only screen and (min-width: 500px) {

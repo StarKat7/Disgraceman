@@ -122,12 +122,10 @@ function knightsLetter(e) {
     }   //  <-- Make it so the area around the buttons cannot be clicked.
     let letter = e.target.innerText;
     let stringArray = knightsWord.split("");
-    //console.log(stringArray);
     if (wyrmsWord.includes(letter)) {
         for (let i = 0; i < wyrmsWord.length; i++) {
             if (wyrmsWord[i] === letter) {
                 stringArray[i] = letter;
-                //console.log(stringArray);
             } else {
                 stringArray[i] = stringArray[i];
             }
