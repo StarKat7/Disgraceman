@@ -51,6 +51,12 @@ const knightEl = document.getElementById("knight");
 const startButtonEl = document.getElementById("start");
 //  Start window
 const startWindow = document.getElementById("pre-game-message");
+//  Defeat window
+const defeatWindow = document.getElementById("defeat");
+//  Wizard window(victory)
+const wizardWindow = document.getElementById("wizard");
+//  Victory window
+const victoryWindow = document.getElementById("victory");
 
 //  Event listeners
 //  For picking letters
@@ -70,6 +76,12 @@ function initialize() {
     knightsWord = knightsHiddenWord();
     //  Reset failCount to 0
     failCount = 0;
+    //  Hide defeat window
+    defeatWindow.style.display = "none";
+    //  Hide wizard window
+    wizardWindow.style.display = "none";
+    //  Hide victory window
+    victoryWindow.style.display = "none";
     //  Make the start window appear
     startButtonEl.disabled = false;
     startWindow.style.display = "block";

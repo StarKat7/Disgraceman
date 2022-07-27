@@ -16,6 +16,7 @@
     width: 400px;
     height: 613px;
     font-family: Georgia;
+    text-align: center;
     grid-template-areas:
         "flamebox"
         "knightword"
@@ -133,10 +134,10 @@
 
   #replay {
     grid-area: "replay";
-    position: absolute;
-    left: 37%;
-    margin: 15px auto;
-    bottom: 5px;
+    /* position: absolute;
+    left: 37%; */
+    margin: auto;
+    bottom: 25px;
     font-size: 15px;
     color: light gray;
     background-color: gray;
@@ -144,7 +145,7 @@
     font-family: Georgia;
   }
 
-  #pre-game-message {
+  #pre-game-message, #victory, #defeat, #wizard {
     position: absolute;
     background: url("https://i.imgur.com/ywHmj7F.jpg");
     width: 300px;
