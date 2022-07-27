@@ -47,12 +47,18 @@ const replayButtonEl = document.getElementById("replay");
 const knightsWordEl = document.getElementById("knights-word");
 //  The dragon's flame(where the knight goes)
 const knightEl = document.getElementById("knight");
+//  Start button
+const startButtonEl = document.getElementById("start");
+//  Start window
+const startWindow = document.getElementById("pre-game-message");
 
 //  Event listeners
 //  For picking letters
 alphaButtonEl.addEventListener("click", knightsLetter);
 //  For replay button
 replayButtonEl.addEventListener("click", initialize);
+//  For start button
+startButtonEl.addEventListener("click", dismissStartWindow);
 
 initialize();
 //  Functions
@@ -78,6 +84,9 @@ function initialize() {
     victory = null;
     //  Reset gameEnd to false
     gameEnd = false;
+    //  Make the start window appear
+    startButtonEl.disabled = false;
+    startWindow.style.display = "block";
     render();
 }
 
@@ -153,6 +162,11 @@ function knightsLetter(e) {
         }
     }
     render();
+}
+
+function dismissStartWindow() {
+    startButtonEl.disabled = true;
+    startWindow.style.display = "none";
 }
 
 function knightsHiddenWord() {
