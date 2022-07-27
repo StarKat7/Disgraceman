@@ -132,7 +132,7 @@
     font-family: Georgia;
   }
 
-  #replay {
+  .replay {
     grid-area: "replay";
     /* position: absolute;
     left: 37%; */
@@ -161,13 +161,13 @@
     border-radius: 5px;
   }
 
-  #pre-game-message > p {
+  #pre-game-message > p, #victory > p, #defeat > p, #wizard > p {
     margin: 20px;
     font-weight: bold;
     color: white;
   }
 
-  #start {
+  #start, .replay {
     background-color: rgb(79, 50, 32);
     border-radius: 5px;
     margin: 0px;

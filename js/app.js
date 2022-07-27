@@ -2,7 +2,7 @@ console.log("Finding dragons...");
 
 //  This needs to be an array of objects that contains the secret word and its definition(to be given when the player wins)
 const wyrmWords = [
-    {word: "BUMFUZZLE", definition: "to confuse, to perplex, to fluster"},
+    {word: "BUMFUZZLE", definition: "Bumfuzzle. To confuse, to perplex, to fluster."},
     {word: "CATTYWAMPUS", definition: "when something is askew or awry" },
     {word: "TARADIDDLE", definition: "lies or pretentious nonsense"},
     {word: "SNICKERSNEE", definition: "a large knife"},
@@ -37,12 +37,18 @@ let failCount;
 let victory;
 //  Has the game ended?
 let gameEnd;
+//  Flawless victory
+let wizard;
 
 //  Cached element selectors
 //  The letter buttons
 const alphaButtonEl = document.querySelector("#alphabuttons");
-//  The replay button
-const replayButtonEl = document.getElementById("replay");
+//  Victory replay button
+const victoryReplayButtonEl = document.getElementById("victory-replay");
+//  The wizard's replay button
+const wizardReplayButtonEl = document.getElementById("wizard-replay");
+//  Defeat replay button
+const defeatReplayButtonEl = document.getElementById("defeat-replay");
 //  The Knight's Word panel
 const knightsWordEl = document.getElementById("knights-word");
 //  The dragon's flame(where the knight goes)
@@ -57,12 +63,15 @@ const defeatWindow = document.getElementById("defeat");
 const wizardWindow = document.getElementById("wizard");
 //  Victory window
 const victoryWindow = document.getElementById("victory");
+const victoryWindowText = document.querySelector("#victory p");
 
 //  Event listeners
 //  For picking letters
 alphaButtonEl.addEventListener("click", knightsLetter);
-//  For replay button
-replayButtonEl.addEventListener("click", initialize);
+//  For replay buttons
+wizardReplayButtonEl.addEventListener("click", initialize);
+victoryReplayButtonEl.addEventListener("click", initialize);
+defeatReplayButtonEl.addEventListener("click", initialize);
 //  For start button
 startButtonEl.addEventListener("click", dismissStartWindow);
 
@@ -85,8 +94,10 @@ function initialize() {
     //  Make the start window appear
     startButtonEl.disabled = false;
     startWindow.style.display = "block";
-    //  Deactivate and darken replay button
-    replayButtonEl.disabled = true;
+    //  Deactivate and darken replay buttons
+    wizardReplayButtonEl.disabled = true;
+    victoryReplayButtonEl.disabled = true;
+    defeatReplayButtonEl.disabled = true;
     //  Deactivate buttons so player can't click them before start window is dismissed
     let buttons = alphaButtonEl.getElementsByTagName("button");
         for (button of buttons) {
@@ -154,15 +165,25 @@ function knightsLetter(e) {
     if (failCount === 6) {
         victory = false;
         gameEnd = true;
+        defeatWindow.style.display = "block";
+        defeatReplayButtonEl.disabled = false;
     }
     //  And if there are no underscores remaining, the Knight wins!
     if (knightsWord === wyrmsWord) {
         victory = true;
         gameEnd = true;
+        if (failCount === 0) {
+            wizardWindow.style.display = "block";
+            wizardReplayButtonEl.disabled = false;
+        } else {
+            victoryWindow.style.display = "block";
+            // victoryWindowText.innerText = `Congratulations, worthy knight! Here is your prize: ${}`
+            victoryReplayButtonEl.disabled = false;
+        }
     }
     //  If the game is over, activate the replay button and also deactivate all the remaining letter buttons
     if (gameEnd === true) {
-        replayButtonEl.disabled = false;
+        // replayButtonEl.disabled = false;
         let buttons = alphaButtonEl.getElementsByTagName("button");
         for (button of buttons) {
             if (button.disabled === false) {
