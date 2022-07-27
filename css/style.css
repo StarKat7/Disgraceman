@@ -146,7 +146,7 @@
 
   #pre-game-message {
     position: absolute;
-    background: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background: url("https://i.imgur.com/ywHmj7F.jpg");
     width: 300px;
     height: 200px;
     margin: 0px auto;
@@ -155,18 +155,22 @@
     z-index: 10;
     text-align: center;
     justify-content: center;
-    background-color: gray;
-    border: 5px solid black;
+    border: 5px solid rgb(79, 50, 32);
+    border-style: groove;
     border-radius: 5px;
   }
 
   #pre-game-message > p {
     margin: 20px;
+    font-weight: bold;
+    color: white;
   }
 
   #start {
-    background-color: gray;
+    background-color: rgb(79, 50, 32);
     border-radius: 5px;
+    margin: 0px;
+    color: white;
   }
 
   @media only screen and (min-width: 500px) {
