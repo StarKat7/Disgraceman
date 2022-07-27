@@ -70,23 +70,22 @@ function initialize() {
     knightsWord = knightsHiddenWord();
     //  Reset failCount to 0
     failCount = 0;
-    //  Reset alphaButtons to active
-    let buttons = alphaButtonEl.getElementsByTagName("button");
-    for (button of buttons) {
-        if (button.disabled === true) {
-            button.disabled = false;
-            // button.style.display = "block";
-        }
-    }
+    //  Make the start window appear
+    startButtonEl.disabled = false;
+    startWindow.style.display = "block";
     //  Deactivate and darken replay button
     replayButtonEl.disabled = true;
+    //  Deactivate buttons so player can't click them before start window is dismissed
+    let buttons = alphaButtonEl.getElementsByTagName("button");
+        for (button of buttons) {
+            if (button.disabled === false) {
+                button.disabled = true;
+            }
+        }
     //  Reset victory status
     victory = null;
     //  Reset gameEnd to false
     gameEnd = false;
-    //  Make the start window appear
-    startButtonEl.disabled = false;
-    startWindow.style.display = "block";
     render();
 }
 
@@ -164,9 +163,17 @@ function knightsLetter(e) {
     render();
 }
 
-function dismissStartWindow() {
+function dismissStartWindow(e) {
     startButtonEl.disabled = true;
     startWindow.style.display = "none";
+    //  Reset alphaButtons to active
+    let buttons = alphaButtonEl.getElementsByTagName("button");
+    for (button of buttons) {
+        if (button.disabled === true) {
+            button.disabled = false;
+            // button.style.display = "block";
+        }
+    }
 }
 
 function knightsHiddenWord() {
