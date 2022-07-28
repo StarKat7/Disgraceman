@@ -13,7 +13,7 @@ Try to figure out the hidden word by guessing letters. Choose carefully, six mis
 ## Technologies Used
 * HTML
 * JavaScript
-* CSS (Grid)
+* CSS + CSS Grid
 
 ## Icebox
 
