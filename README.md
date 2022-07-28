@@ -1,21 +1,33 @@
-# Disgraceman, a Knights and Dragons-Themed Hangman
+# Disgraceman
 
-### Greetings, noble knight! It is time to venture forth and vanquish the ever-annoying Words Wyrm at his own game! Will you triumph or walk home in shame?
+Test your wit and luck in this knights and dragons version of hangman!
 
-☐ Screenshot(s): Images of your actual game.
+## The Game
+[Game Link - to be added after deployment]
 
-## Technologies
+Try to figure out the hidden word by guessing letters. Choose carefully, six mistakes will result in game over and disgrace for your knight!
+
+![Start Screen](https://i.imgur.com/1m2LYnF.png)
+![The Knight](https://i.imgur.com/DphN9FT.png)
+
+## Technologies Used
 * HTML
 * JavaScript
-* CSS
+* CSS (Grid)
 
-☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
+## Icebox
 
-☐ Next Steps: Planned future enhancements (icebox items).
+* The dragon gives the definition of the word when the player wins
+* Small time delay before the end-of-game dialogue comes up
+* Sound effects
+* Make the letter buttons look like rocks
+* Darken the knight upon losing, as if he's been scorched
 
-The inner workings took around 4 hours, working on CSS now
+## Original Wireframe
 
 ## Resources
-**Background Image** - Edited from "Sunset at Keyhole Arch" by Cedric Letsch on Unsplash.
+**Background Image** - Edited from ["Sunset at Keyhole Arch"](https://unsplash.com/photos/gBEAWbo1RU8) by [Cedric Letsch](https://unsplash.com/@cedricletsch) on [Unsplash](https://unsplash.com/).
 
-**Wood Texture** - Edited from wood texture by Nathan Dumlao on Unsplash.
+**Wood Texture** - Edited from [Wood Texture](https://unsplash.com/photos/J2gEgTPM_OA) by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on [Unsplash](https://unsplash.com/).
+
+**Knight, Fire** - Drawn by me using Clip Studio Paint.

@@ -32,7 +32,6 @@
     background-repeat: no-repeat;
     background-position: 50%;
     height: 350px;
-    /* background-color: orange; */
   }
 
   #knight {
@@ -89,7 +88,6 @@
   #word-box {
     grid-area: "knightword";
     height: 50px;
-    /* background-color: purple; */
     text-align: center;
     padding: 10px auto 0px;
     margin: 5px 2px;
@@ -132,24 +130,10 @@
     font-family: Georgia;
   }
 
-  .replay {
-    grid-area: "replay";
-    /* position: absolute;
-    left: 37%; */
-    margin: auto;
-    bottom: 25px;
-    font-size: 15px;
-    color: light gray;
-    background-color: gray;
-    border-radius: 5px;
-    font-family: Georgia;
-  }
-
   #pre-game-message, #victory, #defeat, #wizard {
     position: absolute;
     background: url("https://i.imgur.com/ywHmj7F.jpg");
     width: 300px;
-    height: 200px;
     margin: 0px auto;
     top: 30%;
     left: 12%;
@@ -170,8 +154,10 @@
   #start, .replay {
     background-color: rgb(79, 50, 32);
     border-radius: 5px;
-    margin: 0px;
+    margin: 0px auto 20px;
     color: white;
+    font-family: Georgia;
+    font-weight: bold;
   }
 
   @media only screen and (min-width: 500px) {

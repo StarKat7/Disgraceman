@@ -1,6 +1,6 @@
 console.log("Finding dragons...");
 
-//  This needs to be an array of objects that contains the secret word and its definition(to be given when the player wins)
+//  This needs to be an array of objects that contains the secret word and its definition(ICEBOX: to be given when the player wins)
 const wyrmWords = [
     {word: "BUMFUZZLE", definition: "Bumfuzzle. To confuse, to perplex, to fluster."},
     {word: "CATTYWAMPUS", definition: "when something is askew or awry" },
@@ -160,7 +160,6 @@ function knightsLetter(e) {
     knightsSpacedWord = stringArray.join(" ");
     //  Now I need to make it so the button deactivates.
     e.target.disabled = true;
-    // e.target.style.display = "none";
     //  Also if the failCount hits 6, that's game-over.
     if (failCount === 6) {
         victory = false;
@@ -177,13 +176,11 @@ function knightsLetter(e) {
             wizardReplayButtonEl.disabled = false;
         } else {
             victoryWindow.style.display = "block";
-            // victoryWindowText.innerText = `Congratulations, worthy knight! Here is your prize: ${}`
             victoryReplayButtonEl.disabled = false;
         }
     }
     //  If the game is over, activate the replay button and also deactivate all the remaining letter buttons
     if (gameEnd === true) {
-        // replayButtonEl.disabled = false;
         let buttons = alphaButtonEl.getElementsByTagName("button");
         for (button of buttons) {
             if (button.disabled === false) {
@@ -202,7 +199,6 @@ function dismissStartWindow(e) {
     for (button of buttons) {
         if (button.disabled === true) {
             button.disabled = false;
-            // button.style.display = "block";
         }
     }
 }
@@ -211,7 +207,7 @@ function knightsHiddenWord() {
     //  Underscores are used to replace the characters in the wyrmsWord
     let hiddenWord = "";
     let wordArray = [];
-    console.log(wyrmsWord); // <-- For the wizards
+    console.log(wyrmsWord, "<-- For the wizards");
     for (let i = 0; i < wyrmsWord.length; i++) {
         hiddenWord += "_";
         wordArray.push("_");
