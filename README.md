@@ -25,6 +25,9 @@ Try to figure out the hidden word by guessing letters. Choose carefully, six mis
 
 ## Original Wireframe
 
+![Wireframe](https://i.imgur.com/8s7jzpf.png)
+![Game Flow](https://i.imgur.com/2JuHBdR.png)
+
 ## Resources
 **Background Image** - Edited from ["Sunset at Keyhole Arch"](https://unsplash.com/photos/gBEAWbo1RU8) by [Cedric Letsch](https://unsplash.com/@cedricletsch) on [Unsplash](https://unsplash.com/).
 
