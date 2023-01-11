@@ -101,6 +101,8 @@ function initialize() {
     //  Deactivate buttons so player can't click them before start window is dismissed
     let buttons = alphaButtonEl.getElementsByTagName("button");
         for (button of buttons) {
+            button.style.backgroundColor = "gray";
+            button.style.color = "white";
             if (button.disabled === false) {
                 button.disabled = true;
             }
@@ -159,6 +161,8 @@ function knightsLetter(e) {
     knightsWord = stringArray.join("");
     knightsSpacedWord = stringArray.join(" ");
     //  Now I need to make it so the button deactivates.
+    e.target.style.backgroundColor = "black";
+    e.target.style.color = "black";
     e.target.disabled = true;
     //  Also if the failCount hits 6, that's game-over.
     if (failCount === 6) {
