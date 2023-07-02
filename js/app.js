@@ -65,6 +65,7 @@ const wizardWindow = document.getElementById("wizard");
 const victoryWindow = document.getElementById("victory");
 const victoryWindowText = document.querySelector("#victory p");
 
+console.log(alphaButtonEl)
 //  Event listeners
 //  For picking letters
 alphaButtonEl.addEventListener("click", knightsLetter);

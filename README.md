@@ -22,6 +22,7 @@ Try to figure out the hidden word by guessing letters. Choose carefully, six mis
 * Sound effects
 * Make the letter buttons look like rocks
 * Darken the knight upon losing, as if he's been scorched
+* Use random word API to have an even greater variety of words
 
 ## Original Wireframe
 

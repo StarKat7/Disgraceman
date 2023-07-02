@@ -3,7 +3,7 @@
   }
 
   html {
-    background: url("https://i.imgur.com/Vt86LII.jpg") no-repeat center center fixed;
+    background: url("https://i.imgur.com/tCUmT1T.jpg") no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,7 +27,7 @@
   #flame-box {
     grid-area: "flamebox";
     display: grid;
-    background-image: url("https://i.imgur.com/jcub6kI.png");
+    background-image: url("https://i.imgur.com/BaHyUEa.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -132,7 +132,7 @@
 
   #pre-game-message, #victory, #defeat, #wizard {
     position: absolute;
-    background: url("https://i.imgur.com/ywHmj7F.jpg");
+    background: url("https://i.imgur.com/ktyH9iM.jpg");
     width: 300px;
     margin: 0px auto;
     top: 30%;
